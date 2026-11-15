@@ -9,7 +9,7 @@ import { ArrowRight, ImagePlus, LogOut, Plus, Save, Trash2, UploadCloud } from "
 type Post = { id:string; title:string; slug:string; category:string; excerpt:string; content:string; cover_image:string|null; pdf_url?:string|null; price?:string|null; action_url?:string|null; author?:string|null; source_url?:string|null; status:"draft"|"published"; created_at:string };
 const emptyPost = { title:"", slug:"", category:"مقالات علمی", excerpt:"", content:"", cover_image:"", pdf_url:"", price:"", action_url:"", author:"", source_url:"", status:"draft" as "draft"|"published" };
 const categoryGroups = [
- {label:"۱. روان‌شناسی",items:["روان‌شناسی عمومی","شاخه‌های روان‌شناسی","روان‌شناسی علمی","روان‌شناسی فطری","روان‌شناسی در میان زندگی","آزمون‌های روان‌شناسی","روان‌شناسی کودک","روایت بالین","اختلالات روان‌شناختی"]},
+ {label:"۱. روان‌شناسی",items:["روان‌شناسی عمومی","شاخه‌های روان‌شناسی","روان‌شناسی علمی","روان‌شناسی فطری","روان‌شناسی در میان زندگی","آزمون‌های روان‌شناسی","روان‌شناسی کودک","فلسفه برای کودکان","بازی و مهارت‌های زندگی","شناخت و همراهی با کودکان بیش‌فعال","والدگری آگاهانه و معنا‌محور","روایت بالین","اختلالات روان‌شناختی"]},
  {label:"۲. علوم اسلامی",items:["علوم اسلامی","قرآن","آیه‌نگار","تفسیر","علوم قرآنی","اندیشه اسلامی"]},
  {label:"۳. معارف",items:["معارف","معارف اسلامی","معارف دینی","اخلاق","انسان‌شناسی اسلامی","جرقه‌های معنا"]},
  {label:"۴. زندگی، فرهنگ و آموزش",items:["زندگی","مهارت‌های زندگی","رشد فردی","فرهنگ و رسانه","فیلم و انیمیشن","معرفی کتاب","نقد کتاب","کتابخانه","کودکان","چهره‌نگار","زندگی‌نامه","گفت‌وگو","مصاحبه","روایت زندگی"]},
