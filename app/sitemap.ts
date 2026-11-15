@@ -21,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/media",
     "/nava-va-nayesh",
     "/psychology",
-    "/research",
     "/shop",
   ];
 
