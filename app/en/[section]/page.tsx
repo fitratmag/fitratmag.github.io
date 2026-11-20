@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { SiteFooter } from "../../components/site-shell";
+import { EnglishFooter } from "../english-footer";
 
 const pages: Record<string,{title:string;description:string;intro:string;items?:string[]}> = {
   articles:{title:"Articles & Essays",description:"Research-informed articles, essays and accessible explanations from FITRAT.",intro:"Explore articles on psychology, child development, human nature, meaning, Islamic thought and everyday life.",items:["Psychology and human behaviour","Child development and learning","Meaning, purpose and wellbeing","Psychology, Qur'anic thought and human nature"]},
@@ -41,5 +41,5 @@ export async function generateMetadata({params}:{params:Promise<{section:string}
 export default async function EnglishSection({params}:{params:Promise<{section:string}>}){
  const {section}=await params; const page=pages[section]; if(!page)notFound();
  return <main lang="en" dir="ltr"><header className="site-header"><Link className="brand" href="/en/"><span className="brand-mark">F</span><span className="brand-name">FITRAT<small>INDEPENDENT DIGITAL MAGAZINE</small></span></Link><nav className="desktop-nav"><Link href="/en/articles">Articles</Link><Link href="/en/psychology">Psychology</Link><Link href="/en/children">Children</Link><Link href="/en/life">Life & Meaning</Link><Link href="/en/about">About</Link></nav><Link className="language" href={`/${section}/`} hrefLang="fa" lang="fa">FA</Link></header>
- <div className="inner-page"><section className="inner-hero"><span className="eyebrow">FITRAT · KNOWLEDGE · THOUGHT · LIFE</span><h1>{page.title}</h1><p>{page.description}</p></section><article className="content-intro"><p>{page.intro}</p>{page.items&&<><h2>Explore this section</h2><ul>{page.items.map(item=><li key={item}>{item}</li>)}</ul></>}<p>New English-language features and articles will be added as they are researched, written and editorially reviewed.</p><p><Link href="/en/articles">Browse the magazine →</Link></p></article></div><SiteFooter/></main>;
+ <div className="inner-page"><section className="inner-hero"><span className="eyebrow">FITRAT · KNOWLEDGE · THOUGHT · LIFE</span><h1>{page.title}</h1><p>{page.description}</p></section><article className="content-intro"><p>{page.intro}</p>{page.items&&<><h2>Explore this section</h2><ul>{page.items.map(item=><li key={item}>{item}</li>)}</ul></>}<p>New English-language features and articles will be added as they are researched, written and editorially reviewed.</p><p><Link href="/en/articles">Browse the magazine →</Link></p></article></div><EnglishFooter/></main>;
 }
