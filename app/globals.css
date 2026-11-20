@@ -826,3 +826,23 @@ html,body{color:#20271f;background:#fbf7ef}
 .collection-art-no-photo{background:#e9e1d2!important;background-image:none!important}
 .collection-art-no-photo img{display:none!important}
 .collection-detail-button{border:0;background:transparent;padding:0;color:var(--olive);font:inherit;font-size:11px;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+
+/* SEO article landing pages */
+.article-detail-page{min-height:100vh;background:#f4f0e8;color:#1e2a3a;padding:0 0 70px;direction:rtl}
+.article-detail-top{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d8d1c7;color:#26384d}
+.article-detail-top>a{font-size:14px;font-weight:700}
+.article-detail-top>span{font:9px 'DM Sans',sans-serif;letter-spacing:.16em;color:#9a7954}
+.article-detail{max-width:850px;margin:55px auto 0;padding:0 28px}
+.article-detail-back{display:inline-block;color:#64758a;font-size:12px;margin-bottom:36px}
+.article-detail-category{display:block;color:#9a7954;font-size:12px;font-weight:600;margin-bottom:13px}
+.article-detail h1{font-size:clamp(28px,5vw,44px);line-height:1.9;color:#1d2b3d;margin:0 0 18px;font-weight:700}
+.article-detail-excerpt{font-size:17px;line-height:2.2;color:#657080;margin:0 0 30px}
+.article-detail-cover{display:block;width:100%;max-height:480px;object-fit:cover;border-radius:12px;margin:30px 0}
+.article-detail-meta{display:flex;gap:22px;flex-wrap:wrap;padding:16px 0;border-top:1px solid #d8d1c7;border-bottom:1px solid #d8d1c7;color:#827968;font-size:12px}
+.article-detail-content{padding:28px 0;color:#303d4c;font-size:15px;line-height:2.7;white-space:normal;overflow-wrap:anywhere}
+.article-detail-content p{margin:0 0 20px;white-space:pre-wrap}
+.article-detail-spacer{height:7px}
+.article-detail-source{font-size:13px;color:#667080}
+.article-detail-source a{color:#8a6849;text-decoration:underline}
+.article-detail-footer{margin-top:40px;padding-top:22px;border-top:1px solid #d8d1c7;color:#8a6849;font-size:12px}
+@media(max-width:700px){.article-detail-top{height:65px;padding:0 5%}.article-detail{margin:32px auto 0;padding:0 6%}.article-detail h1{font-size:27px}.article-detail-excerpt{font-size:15px}.article-detail-content{font-size:14px;line-height:2.5}}
