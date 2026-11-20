@@ -2,8 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const siteUrl = "https://rastegarmogadamzahra111-create.github.io";
-const basePath = "/zahra-rastegar-magazine";
+const siteUrl = "https://fitratmag.github.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
@@ -25,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return paths.map((path) => ({
-    url: `${siteUrl}${basePath}${path}/`,
+    url: `${siteUrl}${path}/`,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : 0.7,
   }));
