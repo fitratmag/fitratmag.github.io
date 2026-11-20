@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   applicationName: "فِطرَت",
   alternates: {
     canonical: "/",
+    languages: { "fa": "/", "en": "/en/" },
   },
   keywords: [
     "فطرت", "مجله فطرت", "روان‌شناسی", "روانشناسی علمی",
@@ -64,7 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: siteUrl,
     description:
       "مجله‌ای مستقل برای پیوند روان‌شناسی، علوم اسلامی، رشد کودک، فرهنگ و زندگی.",
-    inLanguage: "fa-IR",
+    inLanguage: ["fa-IR", "en"],
     publisher: {
       "@type": "Organization",
       name: "فِطرَت",
@@ -73,7 +74,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="rtl" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `if (location.pathname === "/en" || location.pathname.startsWith("/en/")) { document.documentElement.lang = "en"; document.documentElement.dir = "ltr"; }` }} />
+      </head>
       <body>
         <script
           type="application/ld+json"
