@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "دنیای کودکان؛ رشد، بازی و یادگیری",
+  description: "مطالبی درباره رشد کودک، فلسفه برای کودکان، بازی‌های هدفمند، مهارت‌های نرم و همراهی آگاهانه با والدین.",
+  alternates: { canonical: "/children/" },
+};
+
 import Link from "next/link";
 import {PageFrame} from "../components/site-shell";
 import {ArrowLeft,Brain,Lightbulb,Gamepad2,HeartHandshake} from "lucide-react";
