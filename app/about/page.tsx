@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "دربارهٔ فِطرَت و سردبیر مجله",
+  description: "با فِطرَت آشنا شوید؛ مجله‌ای مستقل برای پیوند روان‌شناسی، علوم اسلامی، اندیشه و زندگی.",
+  alternates: { canonical: "/about/" },
+};
+
 import {PageFrame} from "../components/site-shell";
 
 export default function About() {
