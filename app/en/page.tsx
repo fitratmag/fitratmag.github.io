@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SiteFooter } from "../components/site-shell";
+import { EnglishFooter } from "./english-footer";
 
 const siteUrl = "https://fitratmag.github.io";
 export const metadata: Metadata = {
@@ -52,6 +52,6 @@ export default function EnglishHome() {
       <div className="department-grid">{sections.map(([title,desc,href],i)=><Link className="department-card" href={href} key={href}><div className="department-info"><span className="department-en">{String(i+1).padStart(2,"0")} · FITRAT</span><h3>{title}</h3><p>{desc}</p><span className="department-arrow">↗</span></div></Link>)}</div>
     </section>
     <section className="editorial-feature" dir="ltr"><div><span className="section-kicker">OUR EDITORIAL APPROACH</span><h2>Knowledge matters when it finds its way into <em>life.</em></h2></div><p>We bring scientific curiosity into conversation with questions of meaning, culture and human flourishing. Our aim is to make careful thinking accessible without losing depth, context or respect for evidence.</p></section>
-    <SiteFooter />
+    <EnglishFooter />
   </main>;
 }
