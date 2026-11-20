@@ -33,6 +33,8 @@ const pages: Record<string,{title:string;description:string;intro:string;items?:
   "articles/submit":{title:"Submit an Article",description:"Guidance for authors interested in contributing to FITRAT.",intro:"We welcome thoughtful, well-sourced contributions. Submissions should identify their author, cite reliable sources and distinguish evidence from personal opinion. Submission instructions are currently available through the Persian editorial desk."}
 };
 
+export async function generateMetadata({params}:{params:Promise<{section:string}>}):Promise<Metadata>{const {section}=await params;const page=pages[section];if(!page)return {title:"Page not found",robots:{index:false,follow:true}};return {title:page.title,description:page.description,alternates:{canonical:`/en/${section}/`},openGraph:{title:page.title,description:page.description,url:`/en/${section}/`,type:"website",locale:"en_US"}};}
+
 export function generateStaticParams(){return Object.keys(pages).filter((key)=>!key.includes("/")).map((section)=>({section}));}
 export async function generateMetadata({params}:{params:Promise<{section:string}>}):Promise<Metadata>{
  const {section}=await params; const page=pages[section]; if(!page)return {};

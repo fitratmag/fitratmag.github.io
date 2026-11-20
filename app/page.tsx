@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "فِطرَت | مجلهٔ مستقل روان‌شناسی، علوم اسلامی و زندگی",
+  description: "مجله فِطرَت؛ جایی برای پیوند روان‌شناسی، علوم اسلامی، رشد کودک، فرهنگ و زندگی. دانش، اندیشه، زندگی.",
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", locale: "fa_IR", url: "/", title: "فِطرَت | دانش، اندیشه، زندگی", description: "مجله‌ای مستقل برای اندیشیدن، آموختن و زیستن بهتر." },
+};
+
 import Link from "next/link";
 import { ArrowLeft, ArrowUpLeft, BookOpen, Brain, FlaskConical, Clapperboard, ShoppingBag, Sparkles, PenLine, Send, MessageCircle, Headphones } from "lucide-react";
 import { SiteHeader, SiteFooter } from "./components/site-shell";
